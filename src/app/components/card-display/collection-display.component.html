@@ -1,7 +1,34 @@
-<div class="collection-container">
-  <div *ngFor="let collection of collections" class="collection-card">
+<div class="collection-container" *ngIf="hasCollection">
+  <div
+    *ngFor="let collection of collections"
+    class="collection-card"
+    (click)="openBoosters(collection.code)"
+  >
     <h3>{{ collection.name }}</h3>
     <p>{{ collection.block }}</p>
     <p>Released on: {{ collection.releaseDate }}</p>
+  </div>
+</div>
+
+<div *ngIf="isLoading" class="loading-container">
+  <p>Abrindo os seus boosters. Aguarde...</p>
+  <br />
+  <div class="loading-animation"></div>
+</div>
+
+<div *ngIf="!isLoading && hasCards">
+  <div class="creature-cards-title">
+    <h1>Suas cartas do pacote aberto</h1>
+  </div>
+  <div class="creature-cards">
+    <div *ngFor="let card of creatureCards">
+      <div class="card">
+        <img [src]="card.imageUrl" alt="card image" />
+        <p>{{ card.name }}</p>
+        <p>{{ card.manaCost }}</p>
+        <p>{{ card.colorIdentity }}</p>
+        <p>{{ card.text }}</p>
+      </div>
+    </div>
   </div>
 </div>

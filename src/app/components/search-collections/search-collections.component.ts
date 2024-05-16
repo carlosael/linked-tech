@@ -11,31 +11,10 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule],
 })
 export class SearchCollectionsComponent {
-  searchName: string = ''; // Nome do bloco a ser pesquisado
-  selectedBlock: string = ''; // Bloco selecionado no dropdown
+  searchName: string = '';
+  selectedBlock: string = '';
 
   constructor(private apiService: MagicApiService) {}
-
-  // Método para lidar com a submissão do formulário
-  // search(): void {
-  //   if (!this.selectedBlock) {
-  //     alert('Por favor, selecione um bloco antes de buscar.');
-  //     return;
-  //   }
-
-  //   // Chamada ao serviço para buscar dados baseado no nome e bloco
-  //   this.apiService.getCollections(this.selectedBlock).subscribe({
-  //     next: (data) => {
-  //       console.log('Dados recebidos:', data);
-  //       return data;
-  //       // Tratamento dos dados recebidos (por exemplo, atualizar uma variável de estado)
-  //     },
-  //     error: (error) => {
-  //       console.error('Erro ao buscar coleções:', error);
-  //       alert('Erro ao buscar coleções. Veja o console para mais detalhes.');
-  //     },
-  //   });
-  // }
 
   search(): void {
     if (!this.selectedBlock) {
