@@ -28,7 +28,7 @@ export class CollectionDisplayComponent implements OnInit {
 
   openBoosters(setId: string): void {
     this.isLoading = true;
-    this.creatureCards = []; // Reset the collection of creature cards
+    this.creatureCards = [];
     this.getBoosterPacks(setId);
   }
 
@@ -40,7 +40,7 @@ export class CollectionDisplayComponent implements OnInit {
             card.types.includes('Creature')
           );
           this.creatureCards.push(...creatures);
-          this.getBoosterPacks(setId); // Recursive call until 30 creatures are found
+          this.getBoosterPacks(setId);
           this.hasCards = true;
         },
         error: (error) => {
@@ -50,7 +50,6 @@ export class CollectionDisplayComponent implements OnInit {
       });
     } else {
       this.isLoading = false;
-      // Here you might also handle the rendering or further use of the creatureCards
     }
   }
 }

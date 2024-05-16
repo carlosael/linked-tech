@@ -46,8 +46,8 @@
 }
 
 .loading-animation {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #426175; /* Blue */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #426175;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -68,8 +68,8 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #1a1a1a; /* Dark grey background */
-  color: white; /* White text for readability */
+  background-color: #1a1a1a;
+  color: white;
   border-radius: 8px;
   margin: 20px;
 }
@@ -88,8 +88,8 @@
 .creature-cards-title {
   gap: 20px;
   padding: 20px;
-  background-color: #1a1a1a; /* Dark grey background */
-  color: white; /* White text for readability */
+  background-color: #1a1a1a;
+  color: white;
   border-radius: 8px;
   margin: 20px;
   text-align: center;
@@ -97,8 +97,8 @@
 }
 
 .card {
-  background-color: #444; /* Slightly lighter grey */
-  border: 2px solid #666; /* Dark grey border */
+  background-color: #444;
+  border: 2px solid #666;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
