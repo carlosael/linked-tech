@@ -1,0 +1,35 @@
+/* src/app/components/collection-display/collection-display.component.scss */
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); // This creates a responsive grid layout
+  gap: 20px; // Space between cards
+  padding: 20px; // Padding around the entire grid
+  background-color: #1a1a1a; // Dark background for the container
+  border-radius: 8px; // Optional: rounded corners for the container
+
+  .collection-card {
+    background-color: #333; // Dark background for each card
+    border: 1px solid #444; // Slightly lighter border for some depth
+    padding: 15px;
+    border-radius: 5px; // Rounded corners for the cards
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px); // Slight raise effect on hover
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Subtle shadow on hover
+    }
+
+    h3 {
+      color: #eee; // Lighter text color for the title
+      margin-bottom: 5px; // Space between the title and the release date
+    }
+
+    p {
+      color: #aaa; // Grey text for the release date
+      font-size: 0.9rem; // Slightly smaller text for less emphasis
+    }
+  }
+}

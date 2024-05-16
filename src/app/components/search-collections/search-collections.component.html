@@ -1,15 +1,20 @@
 <div class="search-container">
-  <form (ngSubmit)="searchCollections()">
-    <div class="form-group">
-      <label for="block">Block</label>
-      <select class="form-control" [(ngModel)]="selectedBlock" name="block">
-        <option value="Amonkhet">Amonkhet</option>
-        <option value="Ixalan">Ixalan</option>
-        <option value="Zendikar">Zendikar</option>
-        <option value="Ravnica">Ravnica</option>
-        <option value="Onslaught">Onslaught</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Search</button>
-  </form>
+  <input
+    type="text"
+    placeholder="Nome"
+    [(ngModel)]="searchName"
+    class="search-input"
+    name="name"
+  />
+
+  <select [(ngModel)]="selectedBlock" name="block" class="block-select">
+    <option value="">Selecione um bloco</option>
+    <option value="Amonkhet">Amonkhet</option>
+    <option value="Ixalan">Ixalan</option>
+    <option value="Zendikar">Zendikar</option>
+    <option value="Ravnica">Ravnica</option>
+    <option value="Onslaught">Onslaught</option>
+  </select>
+
+  <button (click)="search()" class="search-button">Buscar</button>
 </div>
