@@ -26,7 +26,9 @@
         <img [src]="card.imageUrl" alt="card image" />
         <p>{{ card.name }}</p>
         <p>{{ card.manaCost }}</p>
-        <p>{{ card.colorIdentity }}</p>
+        <div *ngFor="let identity of card.colorIdentity" class="mana-icons">
+          <img [src]="getManaIcons(identity)" alt="mana icon" />
+        </div>
         <p>{{ card.text }}</p>
       </div>
     </div>

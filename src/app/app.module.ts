@@ -12,17 +12,11 @@ import { MagicApiService } from './services/magic-api.service';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchCollectionsComponent, // Declarar o componente de pesquisa
-    CollectionDisplayComponent, // Declarar o componente de exibição de cartas
+    SearchCollectionsComponent,
+    CollectionDisplayComponent,
   ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    // Outros módulos necessários para sua aplicação
-  ],
+  imports: [BrowserModule, CommonModule, FormsModule, HttpClientModule],
   providers: [MagicApiService],
-  bootstrap: [AppComponent], // Isso inicia o AppComponent
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -52,4 +52,15 @@ export class CollectionDisplayComponent implements OnInit {
       this.isLoading = false;
     }
   }
+
+  getManaIcons(colorIdentity: string): string {
+    const manaIcons: { [key: string]: string } = {
+      U: 'assets/U.webp',
+      B: 'assets/B.webp',
+      R: 'assets/R.webp',
+      G: 'assets/G.webp',
+      W: 'assets/W.png',
+    };
+    return manaIcons[colorIdentity];
+  }
 }

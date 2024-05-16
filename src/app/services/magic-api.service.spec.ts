@@ -8,7 +8,7 @@ import { MagicApiService } from './magic-api.service';
 describe('MagicApiService', () => {
   let service: MagicApiService;
   let httpMock: HttpTestingController;
-  const baseUrl = 'https://api.magicthegathering.io/v1'; // Replicate the base URL
+  const baseUrl = 'https://api.magicthegathering.io/v1';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -20,7 +20,7 @@ describe('MagicApiService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // Ensure that there are no outstanding requests after each test
+    httpMock.verify();
   });
 
   it('should be created', () => {
